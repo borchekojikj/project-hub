@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+                                        
+                                        
+                                        /* Navbar */
+
+                                        
+@media (min-width: 992px) {
+    .navbar ul a:hover {
+      background: rgb(253,72,45);
+      background: linear-gradient(0deg, rgba(253,72,45,1) 0%, rgba(255, 193, 7,1) 100%);
+      color: white !important;
+    }
+
+    .content h2 {
+      width: 700px;
+    }
+  }
+
+  @media (max-width:992px) {
+    .navbar ul a {
+  
+      color: white !important;
+    }
+  
+    .modal-body button {
+      margin-top: 220px !important;
+    }
+  } 
+
+
+
+  /* Banner */
+
+.banner-container {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.content h2 {
+  font-size: 5em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #bacef0;
+  text-shadow: 1px -1px 16px rgba(246,246,246,0.6);
+}
+
+.content h2:nth-child(2) {
+  color: rgba(255, 193, 7,1);
+  animation: animate 4s ease-in-out infinite;
+}
+
+@media (max-width:425px){
+  .content h2 {
+
+    font-size: 3rem !important;
+  }
+}
+
+@keyframes animate {
+
+  0%,
+  100% {
+      clip-path: polygon(
+          0 45%, 
+          6% 38%, 
+          20% 27%,
+          38% 24%, 
+          40% 47%, 
+          49% 64%, 
+          51% 72%,
+          74% 78%, 
+          79% 75%, 
+          100% 67%, 
+          100% 100%,
+          0 100%);
+  }
+
+  50% {
+      clip-path: polygon(
+          0 59%, 
+          5% 71%, 
+          24% 86%,
+          34% 71%, 
+          41% 64%, 
+          41% 46%, 
+          51% 35%,
+          74% 21%, 
+          89% 35%, 
+          100% 42%, 
+          100% 100%,
+          0 100%);
+  }
+}
+
+
+/* Cards section */
+
+.card {
+  width: 100% !important;
+}
+
+
+input[type="checkbox"] {
+appearance: none;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+input[type="checkbox"]:after {
+content: "\f00c";
+font-family: "Font Awesome 5 free";
+font-weight: 900;
+text-align: center;
+height: 30px;
+width: 30px;
+color: red;
+line-height: 30px;
+background-color: #302F38;
+border-radius: 50%;
+display: none;
+}
+
+input[type="checkbox"]:checked:after {
+display: block;
+}
+
+
+.card:hover {
+scale: 1.05  ;
+}
+
+.cards a {
+text-decoration: none;
+}
+
+.filter {
+user-select: none;
+}
+
+@media (max-width:400px) {
+  select {
+    font-size: 14px !important;
+  }
+}
+
+
+#particles-js {
+  height: 70vh;
+  background-image: url("https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: multiply;
+  position: relative;
+}
+
+.particles-position {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 320px;
+  position: absolute;
+}
+
+.filter-background {
+  background-color: #302F38 !important;
+}
